@@ -77,6 +77,8 @@ body {
 
 .header-img {
     grid-area: image;
+    display: grid;
+    align-content: center;
 }
 
 img {
