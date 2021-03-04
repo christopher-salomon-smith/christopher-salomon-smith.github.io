@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Gallery</title>
+        <meta charset="UTF-8">
+        <meta name="Gallery Page" content="My stuff">
+        <meta name="author" content="Christopher Smith">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="aux-page.css">
+
+        <style>
+            embed {
+                height:600px;
+                margin-bottom: 3%;
+            }
+
+            em {
+                font-style: italic;
+            }
+
+            #analysis {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            #analysis td, #analysis th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            #analysis tr:nth-child(even){background-color: #f2f2f2;}
+            #analysis tr:hover {background-color: #ddd;}
+            #analysis th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #A5C9FF;
+                color: white;
+            }
+        </style>
+    </head>
+    
+    <div class="grid-container">
+        <header>
+            <h1>Gallery</h1>
+            <h3>Stuff I do...</h3>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="resume-cv.html">Resume/CV</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article>
+                <h2>Research</h2>
+                <section>
+                    <p>
+                        The <a href="https://en.wikipedia.org/wiki/Multi-armed_bandit">Multi-Armed Bandit</a> problem is a specific type of reinforcement learning problem focusing on 
+                        the <em>exploration-exploitation</em> tradeoff dilemma in stochastic scheduling. For a basic example, consider a gambler at a casino facing several slot machines.
+                        Each slot machine has a different expected payout, and the gambler wants to figure out which machine has the highest payout. However, the gambler naturally has limited money, and so they must be
+                        very careful in choosing which slot machine to play. If the gambler plays all the machines once and decides to <em>exploit</em> the one with the best payout from then on, 
+                        they might be missing out on a slot machine that has a much greater payout in the long run. Conversely, if the gambler keeps switching between slot machines to 
+                        <em>explore</em> the different payouts, they may be wasting their money when they could have been exploiting the machine with the best track record so far.
+                        A single slot machine was the inspiration for the term "one-armed bandit". The term "multi-armed bandit" naturally arises when you consider multiple slot machines together.
+                        Designing policies that optimally balance exploration and exploitation is a common goal of bandit researchers. Bandit applications arise in recommender systems, clinical trials, project management, and more.
+                    </p>
+                    <br />
+                    <p>
+                        Several different variants of the problem exist when you make different assumptions about the learning agent (gambler), the number of arms, the nature of reward structure (payouts), any additional information, etc. 
+                        An active area of research is the <em>distributed</em> multi-armed bandit problem, where one considers multiple decision making agents within the same environment. Formulating new distributed bandit
+                        problems and developing novel algorithms to solve them is the main focus of my research team under Professor Ji Liu. Before coming up with new distributed bandit variants, one must first understand the different
+                        single agent variants. Below are some summaries I mainly wrote (with some advice from a team member) of major existing single agent bandit formulations in the literature. Aside from improving our personal understanding
+                        of the different natures of the multi-armed bandit problem, these summaries serve as handy references when we try to generalize and combine them to the distributed case.
+                    </p>
+                    <br />
+                    <embed src="bandit-formulations.pdf" type="application/pdf" width="100%" height="100%">
+                    <p>In addition to exploring new bandit formulations, we sometimes run simulations of different bandit algorithms in order to reproduce results from an existing paper, or to empirically
+                        confirm theoretical results from an algorithm Professor Liu is developing. <a href="https://github.com/csasmith/vip-mab/blob/master/coop-ucb.py">This python script</a> I wrote runs the algorithm found in 
+                        <a href="https://arxiv.org/abs/1512.06888">this paper</a> on arbitrary inputs and displays performance metrics.
+                    </p>
+                </section>
+                <br />
+            </article>
+            <article>
+                <h2>Self Study</h2>
+                <section>
+                    <p>
+                        In case you thought I might be joking, what I said at the end of my bio is true - I actually do enjoy working through
+                        math textbooks in my free time. I have always really liked math, but when I came to college I tragically shied away 
+                        from the scary proof-based math courses and opted first for and Applied Mathematics and Statistics major. After feeling 
+                        like I wasn't actually developing any real skills from the AMS courses, I switched to Computer Science, which I enjoy a lot
+                        more. Nevertheless, I still lamented the fact I was missing out on "real" mathematics (even though it was completely self-imposed?).
+                        During fall 2019 I took a watered-down proof-based discrete math course for computer science majors, and I really enjoyed it. 
+                        This started to get the gears turning, and then the pandemic hit. Every internship opportunity 
+                        under the sun seemed to fall through, and I found myself with a lot of free time on my hands, so I decided to start working through
+                        Stephen Abbott's <em>Understanding Analysis</em>... and I loved it. It was ridiculously hard, it took me the whole summer, and I didn't even
+                        finish the last chapter, but that was the turning point. After thinking about it some more for another semester, I decided to declare a
+                        Mathematics double major. Now I am taking an introductory Real Analysis course (my summer experience has been very helpful thusfar), 
+                        and an upper division linear algebra course, and I could not be happier. Both courses are quite challenging and my grades have been far from 
+                        perfect, but I am exactly where I want to be. I am currently making very slow progress through Saunders Mac Lane's 
+                        <em>Categories for the Working Mathematician</em>, and when the semester ends I plan on picking up a book on measure theory.
+                    </p>
+                    <br />
+                    <p>
+                        Below I have included all my notes and exercises from the summer I went through <em>Understanding Analysis</em>. A lot of the proofs are a mess (potentially wrong),
+                        and the handwriting is meh, but there's also a lot of good in there and I am very proud of my work.
+                    </p>
+                    <br/>
+                    <table id="analysis">
+                        <tr>
+                            <th>Chapter</th>
+                        </tr>
+                        <tr><td><a href="analysis/1.2Preliminaries.pdf" target="_blank" rel="noopener">1.2Preliminaries.pdf</a></td></tr>
+                        <tr><td><a href="analysis/1.3The-Axiom-of-Completeness.pdf" target="_blank" rel="noopener">1.3The-Axiom-of-Completeness.pdf</a></td></tr>
+                        <tr><td><a href="analysis/1.4Consequences-of-Completeness.pdf" target="_blank" rel="noopener">1.4Consequences-of-Completeness.pdf</a></td></tr>
+                        <tr><td><a href="analysis/1.5Cardinality.pdf" target="_blank" rel="noopener">1.5Cardinality.pdf</a></td></tr>
+                        <tr><td><a href="analysis/2.2The-Limit-of-a-Sequence.pdf" target="_blank" rel="noopener">2.2The-Limit-of-a-Sequence.pdf</a></td></tr>
+                        <tr><td><a href="analysis/2.3The-Algebraic-and-Order-Limit-Theorems.pdf" target="_blank" rel="noopener">2.3The-Algebraic-and-Order-Limit-Theorems.pdf</a></td></tr>
+                        <tr><td><a href="analysis/2.4The-Monotone-Convergence-Theorem.pdf" target="_blank" rel="noopener">2.4The-Monotone-Convergence-Theorem.pdf</a></td></tr>
+                        <tr><td><a href="analysis/2.5Subsequences-and-the-Bolzano-Weierstrass-Theorem.pdf" target="_blank" rel="noopener">2.5Subsequences-and-the-Bolzano-Weierstrass-Theorem.pdf</a></td></tr>
+                        <tr><td><a href="analysis/2.6The-Cauchy-Criterion.pdf" target="_blank" rel="noopener">2.6The-Cauchy-Criterion.pdf</a></td></tr>
+                        <tr><td><a href="analysis/2.7Properties-of-Infinite-Series.pdf" target="_blank" rel="noopener">2.7Properties-of-Infinite-Series.pdf</a></td></tr>
+                        <tr><td><a href="analysis/3.2Open-and-Closed-Sets.pdf" target="_blank" rel="noopener">3.2Open-and-Closed-Sets.pdf</a></td></tr>
+                        <tr><td><a href="analysis/3.3Compact-Sets.pdf" target="_blank" rel="noopener">3.3Compact-Sets.pdf</a></td></tr>
+                        <tr><td><a href="analysis/4.2Functional-Limits.pdf" target="_blank" rel="noopener">4.2Functional-Limits.pdf</a></td></tr>
+                        <tr><td><a href="analysis/4.3Continuous-Functions.pdf" target="_blank" rel="noopener">4.3Continuous-Functions.pdf</a></td></tr>
+                        <tr><td><a href="analysis/4.4Continuous-Functions-on-Compact-Sets.pdf" target="_blank" rel="noopener">4.4Continuous-Functions-on-Compact-Sets.pdf</a></td></tr>
+                        <tr><td><a href="analysis/4.5The-Intermediate-Value-Theorem.pdf" target="_blank" rel="noopener">4.5The-Intermediate-Value-Theorem.pdf</a></td></tr>
+                        <tr><td><a href="analysis/5.2Derivatives-and-the-Intermediate-Value-Property.pdf" target="_blank" rel="noopener">5.2Derivatives-and-the-Intermediate-Value-Property.pdf</a></td></tr>
+                        <tr><td><a href="analysis/5.3The-Mean-Value-Theorems.pdf" target="_blank" rel="noopener">5.3The-Mean-Value-Theorems.pdf</a></td></tr>
+                        <tr><td><a href="analysis/6.2Uniform-Convergence-of-a-Sequence-of-Functions.pdf" target="_blank" rel="noopener">6.2Uniform-Convergence-of-a-Sequence-of-Functions.pdf</a></td></tr>
+                        <tr><td><a href="analysis/6.3Uniform-Convergence-and-Differentiation.pdf" target="_blank" rel="noopener">6.3Uniform-Convergence-and-Differentiation.pdf</a></td></tr>
+                        <tr><td><a href="analysis/6.4Series-of-Functions.pdf" target="_blank" rel="noopener">6.4Series-of-Functions.pdf</a></td></tr>
+                        <tr><td><a href="analysis/6.5Power-Series.pdf" target="_blank" rel="noopener">6.5Power-Series.pdf</a></td></tr>
+                        <tr><td><a href="analysis/6.6Taylor-Series.pdf" target="_blank" rel="noopener">6.6Taylor-Series.pdf</a></td></tr>
+                    </table>
+                </section>
+            </article>
+        </main>
+        <footer>
+            <span>Contact me at <a href="mailto:christopher.s.smith@stonybrook.edu">christopher.s.smith@stonybrook.edu</a></span>
+            <span> Connect with me on <a href=https://www.linkedin.com/in/christopher-smith-184b40135/>LinkedIn</a></span>
+            <span>Laugh at my code on <a href="https://github.com/csasmith">Github</a></span>
+        </footer>
+    </div>
+</html>
